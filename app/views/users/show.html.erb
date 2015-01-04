@@ -1,2 +1,16 @@
 <h3>User</h3>
 <p>Name: <%= @user.name if @user.name %></p>
+
+
+
+<br><br>
+
+
+
+<br><br>
+<% @trends.each do |trend| %>
+	<%= trend.name %>
+<% end %>
+
+
+<!-- http://jsonviewer.stack.hu/ -->

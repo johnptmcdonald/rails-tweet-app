@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
   helper_method :user_signed_in?
   helper_method :correct_user?
+  helper_method :config_twitter
 
   private
     def current_user
@@ -32,5 +33,17 @@ class ApplicationController < ActionController::Base
         redirect_to root_url, :alert => 'You need to sign in for access to this page.'
       end
     end
+
+    def config_twitter
+        $client = Twitter::REST::Client.new do |config|
+        config.consumer_key        =  ENV["OMNIAUTH_PROVIDER_KEY"] 
+        config.consumer_secret     =  ENV["OMNIAUTH_PROVIDER_SECRET"]
+        config.access_token        = current_user.oauth_token
+        config.access_token_secret = current_user.oauth_secret
+      end
+    end
+
+
+    
 
 end
