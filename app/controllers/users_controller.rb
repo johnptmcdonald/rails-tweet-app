@@ -9,11 +9,17 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
 
-    @followers = $client.followers
+    @twitter_user = $client.user
 
-    @timeline_tweets = $client.user_timeline
+    @followers_count = @twitter_user.followers_count
 
-    @trends = $client.trends_available
+    @friends_count = @twitter_user.friends_count
+
+    @statuses_count = @twitter_user.statuses_count
+
+    # @trends = $client.trends_available
+
+    @profile_image = @twitter_user.profile_image_url
 
   end
 

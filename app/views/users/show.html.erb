@@ -1,16 +1,64 @@
-<h3>User</h3>
-<p>Name: <%= @user.name if @user.name %></p>
+<div class="container">
 
 
 
-<br><br>
+	<div class="col-md-4 ">
+		<div class="panel panel-default">	
+		  	<div class="panel-body lightblue">
+		    	<div class="panel-icon">
+		    		<%= fa_icon "users 5x" %>
+		    	</div>	
+		    	<div class="icon-text">
+		    		<p class="number"><%= @followers_count %></p><p> followers</p>
+		    	</div>
+		    
+		  	</div>
+
+		  <div class="panel-footer ">
+		  	More info
+		  </div>
+		</div>
+	</div>
+
+	<div class="col-md-4 ">
+		<div class="panel panel-default">	
+		  	<div class="panel-body green">
+		  		<div class="panel-icon">
+		    		<%= fa_icon "twitter 5x" %>
+			  	</div>
+			    <div class="icon-text">
+			    	<p class="number"><%= @statuses_count %></p><p> tweets</p> 
+			    </div>
+		    </div>
+		  	<div class="panel-footer ">
+		  		More info
+		  	</div>
+		</div>
+	</div>
+
+	<div class="col-md-4 ">
+		<div class="panel panel-default">	
+			<div class="panel-body pink">
+				<div class="panel-icon">
+				    <div id="big-user"><%= fa_icon "user 5x" %></div>
+				    <div id="arrow-right"><%= fa_icon "level-up 2x" %></div>
+				    <div id="small-user"><%= fa_icon "user 3x" %></div>
+				</div>
+				<div class="icon-text">
+					<p class="number"><%= @friends_count %></p><p> users you follow</p> 
+			    </div>
+			</div>
+		  <div class="panel-footer ">
+		  	More info
+		  </div>
+		</div>
+	</div>
 
 
 
-<br><br>
-<% @trends.each do |trend| %>
-	<%= trend.name %>
-<% end %>
+<!--  fa-users [&#xf0c0;]
+ fa-twitter [&#xf099;] -->
 
+</container>
 
 <!-- http://jsonviewer.stack.hu/ -->

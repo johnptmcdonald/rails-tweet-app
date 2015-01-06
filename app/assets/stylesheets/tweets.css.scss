@@ -1,3 +1,89 @@
 // Place all the styles related to the tweets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.green {
+	background-color: #8cc152;
+	color: white;
+}
+
+.lightblue {
+	background-color: #3bb5e8;
+	color: white;
+}
+
+.orange {
+	background-color: #feab34;
+	color: white;
+}
+
+.red {
+	background-color: #e9573f;
+	color: white;
+}
+
+.pink {
+	background-color: #eb72b6;
+	color: white;
+}
+
+.icon-text {
+	text-align: center;
+
+
+}
+
+.profile_image {
+	float: right;
+}
+
+@media (max-width: 768px) {
+	.profile_image {
+		float: left;
+	}
+}
+
+.collapse {
+	padding-right: 0 !important;
+}
+
+.panel {
+
+
+	.panel-icon {
+		text-align: center;
+	}
+
+	.number {
+		font-size: 3em;
+		font-weight: bold;
+		margin: 0px 0 -5px 0;
+
+	}
+
+	#big-user {
+		display: inline-block;		
+		position: relative;
+		right: -15px;
+	}
+
+	#arrow-right {
+		display: inline-block;
+		position: relative;
+		top: -2px;
+		right: -16px;
+	}
+
+	#small-user {
+		display: inline-block;
+		position: relative;
+		top: -30px;
+		right: 10px;
+	}
+}
+
+
+
+
+
+
